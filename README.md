@@ -1,3 +1,9 @@
+# Research
+## See Final Section for instructions
+
+
+
+
 # STRATA — DC0: Repository & Database Setup
 
 **STRATA (Software daTa Repository Analysis & Testing Architecture)**
@@ -284,8 +290,9 @@ python main.py predict --model-type random_forest --max-depth 5
 
 ## research notes:
 
-proper quantity of issues from junit-team/junit4 with max pages at 9
-mining all commits takes roughly 20 minutes
+before performing the following workflow, set up a python virtual environment and set the following variable
+$env:GITHUB_TOKEN="<your github personal access token here>"
+mining all commits takes roughly 20 minutes for Junit4 and around an hour for Flask
 
 process:
 python main.py junit-team/junit4 --issues --max-commits 10
