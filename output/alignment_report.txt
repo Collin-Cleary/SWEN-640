@@ -1,0 +1,55 @@
+VOCABULARY ALIGNMENT REPORT
+========================================
+
+Commit Message Vocabulary Clusters
+------------------------------------
+  Cluster 0: request, new, instead, sign, actual, key, branch, case, check, public
+  Cluster 1: fix, pull, merg, use, test, ad, name, add, plugin, releas
+  Cluster 2: remov, updat
+  Cluster 3: junit
+  Cluster 4: javadoc, maven, mvn, jdk
+
+Code Identifier Vocabulary Clusters
+------------------------------------
+  Cluster 0: expect, run, name, error, type, except, fail, end, listen, wait
+  Cluster 1: actual, assertequ, test, descript, delta, valu, testclass, sig, method, categori
+  Cluster 2: messag
+  Cluster 3: constructor, superclass
+  Cluster 4: result
+
+Code Comment Vocabulary Clusters
+------------------------------------
+  Cluster 0: code, test, link, valu, messag, assert, junit, method, public, array
+  Cluster 1: param, null, string, int, http, char, prefix, arg, foo, uri
+  Cluster 2: class, 1st
+  Cluster 3: expect, run, see, except, void, fail, throw, check, name, type
+  Cluster 4: delta, privat, flag
+
+Alignment Metrics
+========================================
+
+commit ↔ identifier
+  Vocabulary overlap (Jaccard): 6.4%
+  Shared vocabulary size:       79
+  Cluster similarity (ARI):     -0.086
+
+commit ↔ comment
+  Vocabulary overlap (Jaccard): 22.8%
+  Shared vocabulary size:       291
+  Cluster similarity (ARI):     -0.054
+
+identifier ↔ comment
+  Vocabulary overlap (Jaccard): 14.0%
+  Shared vocabulary size:       201
+  Cluster similarity (ARI):     0.637
+
+
+commit messages don't tend to match up with Identifiers but do tend to match up with comments. Identifiers don't match up with comments very well,
+suggesting the presence of some disconnect. However, the cluster similarity between identifier and comment is the highest
+compared to the other two comparisons. 
+
+Comments seem to be closer to the code
+
+All in all, commits seem to have the highest Jaccard overlap with comments, likely because they are both written in natural English.
+The 14% actually seems pretty substantial when looking through the lens that the overlap is between code structure and natural language. So, there
+probably isn't as much disconnect as I originally thought. It probably means developers are using variable, method, or file names in their comments.

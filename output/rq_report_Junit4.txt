@@ -1,0 +1,30 @@
+RQ MODEL REPORT
+========================================
+
+Model type:  decision_tree
+Features:    5
+Train size:  234
+Test size:   59
+Accuracy:    69.5%
+
+Classification report (test set):
+------------------------------------
+              precision    recall  f1-score   support
+
+     minutes       0.33      0.33      0.33         3
+       hours       0.73      0.62      0.67        13
+        days       0.11      0.20      0.14         5
+       weeks       0.00      0.00      0.00         5
+      months       0.89      0.94      0.91        33
+
+    accuracy                           0.69        59
+   macro avg       0.41      0.42      0.41        59
+weighted avg       0.68      0.69      0.69        59
+
+Feature importances (descending):
+------------------------------------
+  commits_in_lifespan       0.5113
+  description_length        0.2803
+  comment_count             0.1568
+  concurrent_commits        0.0425
+  is_feature_request        0.0091

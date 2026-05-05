@@ -1,0 +1,42 @@
+M1 MODEL REPORT
+========================================
+
+Model type:  random_forest
+Features:    9
+Train size:  159
+Test size:   40
+Accuracy:    55.0%
+
+Classification report (test set):
+------------------------------------
+              precision    recall  f1-score   support
+
+        docs       0.00      0.00      0.00         1
+     feature       0.40      0.29      0.33         7
+         fix       0.43      0.67      0.52         9
+       other       0.67      0.67      0.67        21
+    refactor       0.00      0.00      0.00         1
+        test       0.00      0.00      0.00         1
+
+    accuracy                           0.55        40
+   macro avg       0.25      0.27      0.25        40
+weighted avg       0.52      0.55      0.53        40
+
+Feature importances (descending):
+------------------------------------
+  comment_overlap           0.1837
+  cluster_2_frac            0.1553
+  log_token_count           0.1515
+  id_overlap                0.1499
+  cluster_3_frac            0.1442
+  cluster_4_frac            0.1127
+  type_token_ratio          0.1011
+  cluster_0_frac            0.0014
+  cluster_1_frac            0.0002
+
+Interpretation:
+  The most predictive cluster seems to be cluster 2
+  clusters 0 and 1 seem to be relatively useless with their incredibly low importances
+  with comment_overlap being the most significant feature in predicting commit types
+  docs, refactor, and test seem impossible or at least very hard to classify. it might be possible that their keywords are just incredibly uncommon in my dataset (junit-team/junit4)
+  the model seems to default to classes that are easier to classify (other, feature, fix) especially other and fix given how they have the highest precision and recall
