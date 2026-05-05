@@ -290,13 +290,13 @@ python main.py predict --model-type random_forest --max-depth 5
 
 ## research notes:
 
-   before performing the following workflow, set up a python virtual environment and set the following variable
-   $env:GITHUB_TOKEN="<your github personal access token here>"
-   mining all commits takes roughly 20 minutes for Junit4 and around an hour for Flask
+   before performing the following workflow, set up a python virtual environment and set the following variable  
+   $env:GITHUB_TOKEN="<your github personal access token here>"  
+   mining all commits takes roughly 20 minutes for Junit4 and around an hour for Flask  
 
-   process
-   python main.py junit-team/junit4 --issues --max-commits 10
-   python main.py junit-team/junit4
-   python main.py junit-team/junit4 --clean-issues --max-commits 10
-   python main.py junit-team/junit4 --sample-issues --sample-key labels --sample-seed 42 --max-commits 10
-   python main.py research
+   process  
+   python main.py junit-team/junit4 --issues --max-commits 10  
+   python main.py junit-team/junit4  
+   python main.py junit-team/junit4 --clean-issues --max-commits 10  
+   python main.py junit-team/junit4 --sample-issues --sample-key labels --sample-seed 42 --max-commits 10  
+   python main.py research  
